@@ -11,6 +11,13 @@ end
 
 gem 'pg'
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'factory_girl'
+  gem 'shoulda-matchers'
+end
+
 group :assets do
   gem 'sass-rails', '~> 3.2'
   gem 'coffee-rails', '~> 3.2'
@@ -18,3 +25,5 @@ group :assets do
   gem 'bootstrap-sass', '~> 2.0.3.0'
   gem 'handlebars_assets', '0.12.3'
 end
+
+gem 'sad_panda'
