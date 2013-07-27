@@ -1,5 +1,7 @@
 App.Router.map(function() {
-  this.route("tweeters", { path: "all" });
+  this.resource("tweeters", { path: "all" }, function() {
+    this.resource("show", {path: "/:user_id"})
+  });
 });
 
 App.IndexRoute = Ember.Route.extend({
@@ -9,7 +11,10 @@ App.IndexRoute = Ember.Route.extend({
 });
 
 App.TweetersRoute = Ember.Route.extend({
-    setupController: function(controller, model) {
-                           return this.controllerFor('application').set('currentRoute', 'tweeters');
-                             }
+  model: function() {
+          return App.Tweeter.find();
+         },
+  setupController: function(controller, model) {
+          return this.controllerFor('application').set('currentRoute', 'tweeters');
+         }
 });
