@@ -5,7 +5,7 @@ class TweetersController < ApplicationController
 
   def show
     @tweeter = Tweeter.find(params[:id])
-    respond_with @user
+    respond_with @tweeter
   end
 
 end
