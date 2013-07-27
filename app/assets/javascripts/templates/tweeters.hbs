@@ -1,7 +1,25 @@
-<h1>Tweeters</h1>
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-  </tr>
-</table>
+<div class="span3">
+  <h1>Tweeters</h1>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Emotion</th>
+      <th>Twitter Handle</th>
+    </tr>
+    {{#each controller}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{#linkTo "tweeters.show" this}}{{twitter_handle}}{{/linkTo}}</td>
+        <td>{{emotion}}</td>
+        <td>{{polarity}}</td>
+      </tr>
+    {{else}}
+      <p>Enter any Twitter handle</p>
+    {{/each}}
+  </table>
+</div>
+
+<div class="span8">
+  {{outlet}}
+</div>
