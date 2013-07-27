@@ -9,9 +9,10 @@ Decipher::Application.routes.draw do
     def matches?(request)
       request.format == mime_type
     end
+
   end
 
-  resources :users, :except => :edit, :constraints => FormatTest.new(:json)
+  resources :tweeters, only: [:index], :constraints => FormatTest.new(:json)
   get '*foo', :to => 'ember#index', :constraints => FormatTest.new(:html)
   get '/', :to => 'ember#index', :constraints => FormatTest.new(:html)
 
