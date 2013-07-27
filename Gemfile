@@ -27,3 +27,4 @@ group :assets do
 end
 
 gem 'sad_panda'
+gem 'active_model_serializers'
