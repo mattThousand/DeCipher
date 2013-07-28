@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20130727030058) do
 
   create_table "tweeters", :force => true do |t|
-    t.string   "twitter_handle"
+    t.string   "handle"
     t.string   "emotion"
     t.float    "polarity"
     t.datetime "created_at",     :null => false

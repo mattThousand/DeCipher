@@ -1,7 +1,7 @@
 class CreateTweeters < ActiveRecord::Migration
   def change
     create_table :tweeters do |t|
-      t.string :twitter_handle
+      t.string :handle
       t.string :emotion
       t.float :polarity
 

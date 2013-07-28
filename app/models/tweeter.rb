@@ -1,3 +1,3 @@
 class Tweeter < ActiveRecord::Base
-  attr_accessible :emotion, :polarity, :twitter_handle
+  attr_accessible :emotion, :polarity, :handle
 end
