@@ -18,3 +18,12 @@ App.TweetersRoute = Ember.Route.extend({
           return this.controllerFor('application').set('currentRoute', 'tweeters');
          }
 });
+
+App.TweetersNewRoute = App.TweetersRoute.extend({
+    model: function() {
+                 return App.Tweeter.createRecord();
+                   },
+    setupController: function(controller, model) {
+                           return controller.set('content', model);
+                             }
+});
