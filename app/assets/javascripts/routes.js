@@ -1,6 +1,7 @@
 App.Router.map(function() {
   this.resource("tweeters", { path: "all" }, function() {
-    this.resource("show", {path: "/:user_id"})
+    this.route("new");
+    this.route("show", {path: "/:tweeter_id"})
   });
 });
 
@@ -20,10 +21,10 @@ App.TweetersRoute = Ember.Route.extend({
 });
 
 App.TweetersNewRoute = App.TweetersRoute.extend({
-    model: function() {
-                 return App.Tweeter.createRecord();
-                   },
-    setupController: function(controller, model) {
-                           return controller.set('content', model);
-                             }
+  model: function() {
+         return App.Tweeter.createRecord();
+         },
+  setupController: function() {
+          return controller.set('content', model);          
+         }
 });
