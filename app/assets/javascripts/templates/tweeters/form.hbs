@@ -2,5 +2,5 @@
   <div class="input string">
     {{view Ember.TextField valueBinding="newHandle"}}
   </div>
-  <button class="btn btn-success" {{action save}}>Submit</button>
+  <button class="btn btn-success" {{action save target="App.TweetersNewController"}}>Submit</button>
 </form>
