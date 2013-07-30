@@ -1,16 +1,24 @@
 class TweetersController < ApplicationController
 
-
-  respond_to :json
-
   def index
     @tweeters = Tweeter.all
-    respond_with @tweeters
+    render :json @tweeters
   end
 
   def show
     @tweeter = Tweeter.find(params[:id])
-    respond_with @tweeter
+    render :json @tweeter
   end
+
+  def create
+    @tweeter = Tweeter.new(params[:tweeter])
+
+    if @tweeter.save
+      render :json @user
+    else
+      render :json @user, status: 422
+    end
+  end
+  
 
 end

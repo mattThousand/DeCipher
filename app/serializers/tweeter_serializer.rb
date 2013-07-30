@@ -1,3 +1,3 @@
 class TweeterSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :handle, :emotion, :polarity
 end
