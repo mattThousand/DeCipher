@@ -5,7 +5,7 @@
 #= require_self
 #= require bootstrap
 #= require store
-#= require routes
+#= require router
 #= require_tree ./controllers
 #= require_tree ./models
 #= require_tree ./templates
