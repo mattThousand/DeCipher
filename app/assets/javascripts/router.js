@@ -1,6 +1,7 @@
 App.Router.map(function() {
-  this.resource("tweeters", { path: "all" }, function() {
+  this.resource("tweeters", function() {
     this.route("new");
+    this.route("index");
     this.route("show", {path: "/:tweeter_id"})
   });
 });

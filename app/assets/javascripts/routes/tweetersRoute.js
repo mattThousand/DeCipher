@@ -3,7 +3,7 @@ App.TweetersIndexRoute = Ember.Route.extend({
           return App.Tweeter.find();
          },
   setupController: function(controller, model) {
-          return this.controllerFor('application').set('currentRoute', 'tweeters');
+          return this.controllerFor('application').set('currentRoute', 'tweeters.index');
          }
 });
 
