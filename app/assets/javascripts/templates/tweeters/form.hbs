@@ -1,6 +1,8 @@
 <form>
-  <div class="input string">
-    {{view Ember.TextField valueBinding="newHandle"}}
-  </div>
-  <button class="btn btn-success" {{action save target="App.TweetersNewController"}}>Submit</button>
+  <fieldset>
+    <div class="input string">
+      {{view Ember.TextField valueBinding="newHandle"}}
+    </div>
+    <button class="btn btn-success" {{action 'save' target="App.TweetersNewController"}}>Submit</button>
+  </fieldset>
 </form>
